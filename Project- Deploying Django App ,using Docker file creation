@@ -47,3 +47,15 @@ CMD ["python","manage.py","runserver","0.0.0.0:8001"]
 
 :wq
 
+
+Allow the ports in EC2 instance on AWs
+custom TCP 8000  allow anywhere 0.0.0.0
+
+Go to browser and type
+public ip of instance:8000
+
+exmple 43.16.76.66:8000
+
+you will find you web django App page running.
+
+Thanks!
