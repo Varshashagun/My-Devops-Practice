@@ -1,0 +1,49 @@
+used commands:
+ yum install git
+>    13  git --version
+>    14  git status
+>    15  git init
+>    16  git status
+>    17  mkdir gitrepo
+>    18  ls
+>    19  cd gitrepo/
+>    20  git init
+>    21  clear
+>    22  git clone https://github.com/Varshashagun/react_django_demo_app.git
+>    23  ls
+>    24  cd react_django_demo_app/
+>    25  ls
+>    26  #first searche /react_django_demo_app/ project from Git hub,clone this in your own git repo,check all files ,there will alreday a dockerfile created from the project owner,deleted that dockerfile and creted own dockerfile to deploy this application through Docker.Below are the steps :
+>    27  ls
+>    28  rm dockerfile
+>    29  rm Dockerfile
+>    30  ls
+>    31  clear
+>    32  docker ps
+>    33  react_django_app is an application,which is written in python ,so we have to install dependencies ,os everything which require to launch app.Hence we will create dockerfile ,then image from that dockerfile ,then make container,
+>    34  clear
+>    35  cat requirements.txt
+>    36  vim dockerfile
+>    37  docker build .
+>    38  clear
+>    39  docker images
+>    40  #docker image has been created but no tagging,this will create problem in identification
+>    41  docker build . -t django-app
+>    42  docker images
+>    43  clear
+>    44  docker images
+>    45  docker run -d -p 8000:8000 django-app:latest
+>    46  docker ps
+>    47  history
+
+Commands of Dockerfile creation:
+
+FROM python: 3.9
+COPY . .
+RUN pip install -r requirements.txt
+
+EXPOSE 8001
+CMD ["python","manage.py","runserver","0.0.0.0:8001"]
+
+:wq
+
